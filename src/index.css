@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantora+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.root {
+  font-family: "Cantora One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Scrollbar for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(30, 130, 76, 0.4); /* Color matching the background gradient */
+  border-radius: 15px; /* More rounded corners for the track */
+}
+
+
+/* Scrollbar for Firefox */
+* {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #4a8e4a rgba(30, 130, 76, 0.4); /* Darker green handle and matching background track */
+}
