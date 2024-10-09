@@ -13,7 +13,7 @@ export const Hero = () => {
           <motion.h1 
           initial = {{ x: -100, opacity: 0}}
           animate = {{ x: 0, opacity: 1}}
-          transition = {{ duration: 1, delay: 1}}className="text-6xl tracking-tight lg:text-8xl mb-2"> 
+          transition = {{ duration: 1, delay: 0}}className="text-6xl tracking-tight lg:text-8xl mb-2"> 
             <span className="block">Sebastian</span>
             <span className="block">Nieto</span>
           </motion.h1>
@@ -22,7 +22,7 @@ export const Hero = () => {
         <motion.span 
         initial = {{ x: 100, opacity: 0}}
         animate = {{ x: 0, opacity: 1}}
-        transition = {{ duration: 1, delay: 2}}
+        transition = {{ duration: 1, delay: 1}}
           className="bg-gradient-to-r from-green-200 to-lime-200 bg-clip-text text-2xl lg:text-3xl tracking-tight text-transparent
           my-2 max-w-xl text-center tracking-tighter lg:max-w-2xl lg:py-0 lg:mt-4 mt-4 ml-4
           leading-snug bg-[length:200%_200%] bg-top"
