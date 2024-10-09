@@ -1,3 +1,4 @@
+import { useEffect } from "react"; // Import useEffect from React
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutMe from "./components/AboutMe";
@@ -6,6 +7,10 @@ import Contact from "./components/Contact";
 import './index.css';
 
 const App = () => {
+  useEffect(() => {
+    document.title = "Sebastian Nieto"; 
+  }, []); 
+
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-emerald-700">
       {/* Background gradient covering the entire screen */}

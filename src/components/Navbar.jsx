@@ -1,8 +1,13 @@
 import { Link } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     return (
-        <div className="fixed top-0 right-0 p-4 z-20"> 
+        <motion.div
+        initial = {{ x: 100, opacity: 0}}
+          animate = {{ x: 0, opacity: 1}}
+          transition = {{ duration: 1, delay: 3}}
+           className="fixed top-0 right-0 p-4 z-20"> 
             <nav>
                 <ul className="flex flex-col space-y-4">
                     <li>
@@ -51,7 +56,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </nav>
-        </div>
+        </motion.div>
     );
 };
 

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import hiking from "../assets/images/hiking.jpg";
 import linked from "../assets/images/linked.jpg";
 import waterfall from "../assets/images/waterfall.jpg";
+import { motion } from "framer-motion";
 
 //CAROUSEL!
 const ImageCarousel = () => {
@@ -20,7 +21,11 @@ const ImageCarousel = () => {
   }, [images.length]);
 
   return (
-    <div className="w-full h-[35rem] flex items-center justify-center relative overflow-hidden">
+    <motion.div
+    whileInView = {{ opacity: 1, x: 0}}
+    initial= {{ opacity: 0, x: -100}}
+    transition = {{ duration: 1}}
+     className="w-full h-[35rem] flex items-center justify-center relative overflow-hidden">
       <div className="absolute inset-0 flex">
         {images.map((image, index) => (
           <div
@@ -41,15 +46,20 @@ const ImageCarousel = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 // Main = About Me
 export const AboutMe = () => {
   return (
-    <div className="border-neutral-800 pb-24">
-      <h1 className="text-center text-7xl mb-10">About Me</h1>
+    <div
+     className="border-neutral-800 pb-24 mr-40 ml-20">
+      <motion.h1
+          initial={{ opacity: 0 }}
+          whileInView = {{ opacity: 1,}}
+          transition={{ duration: 1}} 
+           className="text-center text-7xl mb-10">About Me</motion.h1>
 
       {/* coarosel container */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
@@ -59,7 +69,11 @@ export const AboutMe = () => {
         </div>
 
         {/* right side text*/}
-        <div className="w-full lg:w-4/5 text-center lg:text-left">
+        <motion.div 
+            whileInView = {{ opacity: 1, x: 0}}
+            initial= {{ opacity: 0, x: 100}}
+            transition = {{ duration: 2}}
+            className="w-full lg:w-4/5 text-center lg:text-left">
           <p className="text-lg mx-auto lg:mx-0 text-center max-w-4xl">
             Outside of school, I’m currently developing an exciting full-stack application focused on La Liga players. This project, built with{" "}
             <span className="bg-gradient-to-r from-green-200 to-lime-200 bg-clip-text text-transparent font-bold">Spring Boot</span>, utilizes web-scraped data to create a{" "}
@@ -73,7 +87,7 @@ export const AboutMe = () => {
             <span className="bg-gradient-to-r from-green-200 to-lime-200 bg-clip-text text-transparent font-bold">JavaScript</span>. I've also completed smaller projects, like this portfolio website, as well as a self-sustaining mini-garden, among others.
             When I’m not coding, I enjoy hiking, rock climbing, and playing soccer whenever I can.
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
