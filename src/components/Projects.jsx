@@ -8,6 +8,7 @@ const Projects = () => {
           initial={{ opacity: 0 }}
         whileInView = {{ opacity: 1,}}
         transition={{ duration: 1}} 
+        viewport={{ once: true}}
          className="text-center text-7xl mb-10">Projects</motion.h1>
 
       <div>
@@ -18,6 +19,7 @@ const Projects = () => {
                   whileInView = {{ opacity: 1, x: 0}}
                   initial= {{ opacity: 0, x: -100}}
                   transition = {{ duration: 2}}
+                  viewport={{ once: true}}
                 src={project.image}
                 width={150}
                 height={150}
@@ -31,6 +33,7 @@ const Projects = () => {
                   whileInView = {{ opacity: 1, x: 0}}
                   initial= {{ opacity: 0, x: 100}}
                   transition = {{ duration: 2}}
+                  viewport={{ once: true}}
                    className=" mb-4">{project.description}</motion.p>
               <div className="flex flex-wrap">
                 {project.technologies.map((tech, index) => (
