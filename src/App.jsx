@@ -12,7 +12,7 @@ const App = () => {
   }, []); 
 
   return (
-    <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-emerald-700">
+    <div className="overflow-x-hidden text-neutral-300">
       {/* Background gradient covering the entire screen */}
       <div className="fixed top-0 left-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_100%_100%_at_50%_50%,rgba(30,130,76,.4),rgba(0,255,100,0.4))]"></div>
 
